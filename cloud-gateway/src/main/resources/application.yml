@@ -1,0 +1,20 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    nacos:
+      discovery:
+        #        server-addr: localhost:8848
+        server-addr: 114.55.111.41:1111
+        username: nacos
+        password: nacos
+        namespace: pro
+    gateway:
+      routes:
+        - id: cloud-jifen
+          uri: lb://cloud-jifen
+          predicates:
+            - Path=/jifen/**
+            - MyGateWay=name,jack

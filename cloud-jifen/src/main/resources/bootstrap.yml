@@ -1,0 +1,16 @@
+
+spring:
+  cloud:
+    nacos:
+      config:
+        namespace: pro
+        password: nacos
+        name: nacos
+        serverAddr: 114.55.111.41:1111
+        group: DEFAULT_GROUP
+        file-extension: yml
+        prefix: cloud-jifen
+        shared-configs: # 共享配置
+          - sentinel-nacos-pro
+  profiles:
+    active: pro

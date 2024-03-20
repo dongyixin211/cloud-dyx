@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: cloud-order
+  cloud:
+    nacos:
+      profiles:
+        active: pro
+      config:
+        namespace: pro
+        password: nacos
+        name: nacos
+        serverAddr: 114.55.111.41:1111
+        group: DEFAULT_GROUP
+        file-extension: yml
+        prefix: cloud-order
+        shared-configs: # 共享配置
+          - sentinel-nacos-pro
+    sentinel:
+      transport:
+        dashboard: localhost:9009
+      eager: true
+  # main:
+  #   allow-bean-definition-overriding: true
+server:
+  port: 9001
+    # ribbon:
+    #   eager-load:
+    #     enabled: true
+    #     # clients:
+    #     #   - cloud-jifen
+
+
+

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cloud-goods
+  cloud:
+    nacos:
+      discovery:
+#        server-addr: localhost:8848
+        server-addr: 114.55.111.41:1111
+        username: nacos
+        password: nacos
+        namespace: pro
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:9009
+      eager: true
+server:
+  port: 8001
+
